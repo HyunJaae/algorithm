@@ -1,11 +1,11 @@
-package algorithm;
+package algorithm.baekjoon;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-// todo : 9012번-괄호
+// todo : 괄호
 public class B9012 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
