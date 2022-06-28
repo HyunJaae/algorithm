@@ -21,7 +21,7 @@ public class Marathon {
         answer = participant[i];
         return answer;
     }
-    public String otherSolution(String[] participant, String[] completion) {
+    public static String otherSolution(String[] participant, String[] completion) {
         String answer = "";
         // hashMap 생성
         HashMap<String, Integer> hm = new HashMap<>();
@@ -30,7 +30,7 @@ public class Marathon {
         for (String player : participant) hm.put(player, hm.getOrDefault(player, 0) + 1);
         // 완주자마다 1씩 빠진다. -> 0이 된다.
         for (String player : completion) hm.put(player, hm.get(player) - 1);
-        System.out.println(hm.keySet());
+        System.out.println("keySet : " + hm.keySet());
 
         // hashMap 에 있는 모든 키를 뽑아온다.
         for (String key : hm.keySet()) {
@@ -47,6 +47,6 @@ public class Marathon {
         String[] participant = {"leo", "kiki", "eden"};
         String[] completion = {"eden", "kiki"};
 
-        System.out.println(solution(participant, completion));
+        System.out.println(otherSolution(participant, completion));
     }
 }
