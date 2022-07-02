@@ -4,6 +4,8 @@ public class Camouflage {
 
     public static int solution(String[][] clothes) {
         int answer = 0;
+        String first = clothes[0][0];
+        System.out.println(first);
         return answer;
     }
 
