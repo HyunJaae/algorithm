@@ -1,6 +1,4 @@
 
-=
-Algorithm.iml,9/e/9e5d20d3d95893377dd5a0da713140b86414eef4
 P
  src/algorithm/baekjoon/Main.java,4/2/4212a8cfb8b85687af5d80ff31a746d611457195
 Q
@@ -17,3 +15,5 @@ Q
 !src/algorithm/baekjoon/B1927.java,d/5/d526217933523c938e54221af882a7ac4631b2fd
 Q
 !src/algorithm/baekjoon/B1037.java,2/1/21c33c39bfe073a2eafcd5770de21495ec9ece86
+=
+Algorithm.iml,9/e/9e5d20d3d95893377dd5a0da713140b86414eef4
