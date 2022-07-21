@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 import static java.lang.Integer.parseInt;
 
-public class Tumblbug1 {
+public class Tumblbug {
     public static String solution(String s) {
         StringBuilder answer = new StringBuilder();
 
