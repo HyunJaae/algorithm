@@ -1,0 +1,15 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Áß‡Ü
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¢Î€’
+J
+java:S2864"4Iterate over the "entrySet" instead of the "keySet".(Å‰Ÿœ
+S	java:S106#"9Replace this use of System.out or System.err by a logger.(Ã¸¬¤ùÿÿÿÿ
+Q
+java:S1854,"6Remove this useless assignment to local variable "s2".(åØÇıÿÿÿÿ
+L
+java:S1854+"6Remove this useless assignment to local variable "s1".(°€¶°
+=
+java:S1481+"'Remove this unused "s1" local variable.(°€¶°
+B
+java:S1481,"'Remove this unused "s2" local variable.(åØÇıÿÿÿÿ
+N	java:S106."9Replace this use of System.out or System.err by a logger.(ä¯ç‹

@@ -1,0 +1,18 @@
+
+r	java:S117	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡ãÛõÿÿÿÿÿ8•Ú¾Ä‹0
+m	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±‹¢®8ì”¿Ä‹0
+R
+java:S1854
+"5Remove this useless assignment to local variable "B".(±‹¢®8ú©¼Ä‹0
+W
+java:S1854	"5Remove this useless assignment to local variable "A".(‡ãÛõÿÿÿÿÿ8ï”¿Ä‹0
+X
+java:S1854"6Remove this useless assignment to local variable "sb".(€ê±Õúÿÿÿÿ8ú©¼Ä‹0
+I
+java:S1481"'Remove this unused "sb" local variable.(€ê±Õúÿÿÿÿ8ý©¼Ä‹0
+H
+java:S1481	"&Remove this unused "A" local variable.(‡ãÛõÿÿÿÿÿ8œÚ¾Ä‹0
+C
+java:S1481
+"&Remove this unused "B" local variable.(±‹¢®8ó”¿Ä‹0
