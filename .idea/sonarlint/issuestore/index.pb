@@ -9,8 +9,6 @@ P
 +src/algorithm/programmers/test/SixShop.java,5/c/5c326773a3d12afefc1796d9bff4c16cff9ab6fe
 Q
 !src/algorithm/baekjoon/B1037.java,2/1/21c33c39bfe073a2eafcd5770de21495ec9ece86
-^
-.src/algorithm/programmers/hash/Camouflage.java,5/d/5d5692d4a2338a61ab9a7cfb22d00fc5af6eb132
 R
 "src/algorithm/baekjoon/B11050.java,8/1/812c0dff87331273f6df7c4797daebf8fbb17386
 \

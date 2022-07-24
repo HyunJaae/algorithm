@@ -2,24 +2,45 @@ package algorithm.programmers.hash;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.stream.Collectors;
 
 public class Phonekemon {
     public static int solution(int[] nums) {
-        int answer = 0;
-        // nums 갯수 절반 크기로 인덱스 값이 겹치지 않게 뽑는다.
-        // 뽑은 값을 키 값으로 갖게 한다.
-        // 뽑은 값이 같다면 밸류에 +1
-        int getMon = nums.length/2;
-        int[] arr = new int[getMon];
+        int answer;
 
-        HashMap<Arrays, Integer> map = new HashMap<>();
+        int getMon = nums.length / 2;
 
-        for (int i = 0; i < )
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+
+        answer = Math.min(map.size(), getMon);
+
         return answer;
     }
 
+    public static int solution01(int[] nums) {
+        HashSet<Integer> hs = new HashSet<>();
+
+        for (int num : nums) {
+            hs.add(num);
+        }
+
+        return Math.min(hs.size(), nums.length / 2);
+    }
+
+    public static int solution02(int[] nums) {
+        return Arrays.stream(nums)
+                .boxed()
+                .collect(Collectors.collectingAndThen(Collectors.toSet(),
+                        phonekemons -> Integer.min(phonekemons.size(), nums.length / 2)));
+    }
+
     public static void main(String[] args) {
-        int[] typeList = {3, 1, 2, 3};
+        int[] typeList = {3, 3, 2, 3, 3, 2};
 
         System.out.println(solution(typeList));
     }
