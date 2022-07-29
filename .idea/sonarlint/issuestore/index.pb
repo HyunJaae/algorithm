@@ -25,3 +25,5 @@ Q
 !src/algorithm/baekjoon/B2609.java,0/6/06efdd0f3d1cfc759025d278e045c0d557a544b7
 Q
 !src/algorithm/baekjoon/B4949.java,1/b/1b859c31860c62d13ea54cb8024ebf53c4416110
+]
+-src/algorithm/programmers/hash/PhoneBook.java,d/e/de9eda99376c0bc2460dafa966fe13f037bcad42
