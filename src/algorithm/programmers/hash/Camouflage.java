@@ -1,12 +1,14 @@
 package algorithm.programmers.hash;
 
+import java.util.HashMap;
+
 // TODO: 실패
 public class Camouflage {
 
     public static int solution(String[][] clothes) {
         int answer = 0;
 
-        
+        HashMap<String, Integer> map = new HashMap<>();
 
         return answer;
     }
