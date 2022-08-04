@@ -3,8 +3,6 @@ P
  src/algorithm/baekjoon/Main.java,4/2/4212a8cfb8b85687af5d80ff31a746d611457195
 =
 Algorithm.iml,9/e/9e5d20d3d95893377dd5a0da713140b86414eef4
-\
-,src/algorithm/programmers/hash/Marathon.java,5/a/5ad4eaa883a8f9e0b677e4ce2d69253326ec2f40
 [
 +src/algorithm/programmers/test/SixShop.java,5/c/5c326773a3d12afefc1796d9bff4c16cff9ab6fe
 Q
