@@ -30,7 +30,7 @@ public class BestAlbum {
         totalPlayList.sort(((o1, o2) -> hashMap.get(o2).compareTo(hashMap.get(o1))));
 
         for(String key : hashMap.keySet()) {
-
+            int totalPlay = hashMap.get(key);
         }
         return answer;
     }
