@@ -1,14 +1,12 @@
 package algorithm.programmers.hash;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.List;
 
 public class BestAlbum {
 
     public static int[] solution(String[] genres, int[] plays) {
-        int[] answer = {4, 1, 3, 0};
         // 장르별로 가장 많이 재생된 노래를 두 개씩 모아 베스트 앨범으로 만든다.
         // 노래는 고유 번호로 구분, 노래 수록 기준은 다음과 같다.
         // 1. 속한 노래가 많이 재생된 장르를 먼저
@@ -24,13 +22,29 @@ public class BestAlbum {
         for (int i = 0; i < genres.length; i++) {
             hashMap.put(genres[i], hashMap.getOrDefault(genres[i], 0) + plays[i]);
         }
-        System.out.println(hashMap);
-        ArrayList<String> totalPlayList = new ArrayList<>(hashMap.keySet());
+        int[] answer = new int[hashMap.size() * 2];
         // value 값으로 오름차순 람다식
-        totalPlayList.sort(((o1, o2) -> hashMap.get(o2).compareTo(hashMap.get(o1))));
+        List<String> totalPlayList = new ArrayList<>(hashMap.keySet());
+        totalPlayList.sort((o1, o2) -> hashMap.get(o2).compareTo(hashMap.get(o1)));
 
+        ArrayList<Integer> answerList = new ArrayList<>();
         for(String key : hashMap.keySet()) {
-            int totalPlay = hashMap.get(key);
+            HashMap<Integer, Integer> playMap = new HashMap<>();
+            for (int i = 0; i < genres.length; i++) {
+                if(genres[i].equals(key)) {
+                    playMap.put(i, plays[i]);
+                }
+            }
+            ArrayList<Integer> mapVal = new ArrayList<>(playMap.keySet());
+            mapVal.sort((o1, o2) -> playMap.get(o2).compareTo(playMap.get(o1)));
+
+            for (int j = 0; j < 2; j++) {
+                answerList.add(mapVal.get(j));
+            }
+        }
+
+        for (int y = 0; y < answer.length; y++) {
+            answer[y] = answerList.get(y);
         }
         return answer;
     }
