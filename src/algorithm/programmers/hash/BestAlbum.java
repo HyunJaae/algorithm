@@ -12,7 +12,6 @@ public class BestAlbum {
         for (int i = 0; i < genres.length; i++) {
             hashMap.put(genres[i], hashMap.getOrDefault(genres[i], 0) + plays[i]);
         }
-        int[] answer = new int[hashMap.size() * 2];
         // value 값으로 내림차순 람다식
         ArrayList<String> totalPlayList = new ArrayList<>(hashMap.keySet());
         totalPlayList.sort((o1, o2) -> hashMap.get(o2).compareTo(hashMap.get(o1)));
@@ -34,6 +33,7 @@ public class BestAlbum {
             }
         }
 
+        int[] answer = new int[hashMap.size() * 2];
         for (int y = 0; y < answer.length; y++) {
             answer[y] = answerList.get(y);
         }
