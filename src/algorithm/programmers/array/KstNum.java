@@ -1,6 +1,5 @@
 package algorithm.programmers.array;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class KstNum {
@@ -8,26 +7,33 @@ public class KstNum {
     public static int[] solution(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
 
-        ArrayList<Integer> list = new ArrayList<>();
         for (int y = 0; y < commands.length; y++) {
             int i = commands[y][0];
             int j = commands[y][1];
             int k = commands[y][2];
+            int v = j-i + 1;
 
-            int[] arr = new int[j-i];
-            System.out.println(j-i);
-            System.out.println(k-1);
+            int[] arr = new int[v];
 
-            for (int u = 0; u < arr.length; u++) {
-                arr[u] = array[i-1 + u];
-            }
+            // array 배열의 srcPos 번째 값부터 arr 배열의 destPos 번째에서 arr.length 길이만큼 차례로 복사
+            System.arraycopy(array, i - 1, arr, 0, arr.length);
             Arrays.sort(arr);
-            list.add(arr[k-1]);
+            answer[y] = arr[k-1];
         }
 
-        for (int i = 0; i < answer.length; i++) {
-            answer[i] = list.get(i);
+        return answer;
+    }
+
+    public static int[] solution00(int[] array, int[][] commands) {
+        int[] answer = new int[commands.length];
+
+        for(int i=0; i<commands.length; i++){
+            // Arrays.copyOfRange() : 특정 배열의 원하는 범위만큼 복사하여 새로운 배열을 만드는 메소드
+            int[] temp = Arrays.copyOfRange(array, commands[i][0]-1, commands[i][1]);
+            Arrays.sort(temp);
+            answer[i] = temp[commands[i][2]-1];
         }
+
         return answer;
     }
 
@@ -37,7 +43,7 @@ public class KstNum {
         int[] result = solution(array, commands);
 
         for (int j : result) {
-            System.out.println(j);
+            System.out.println("result : " + j);
         }
     }
 }
