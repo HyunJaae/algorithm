@@ -1,7 +1,6 @@
 package algorithm.programmers.hash;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 
 public class BestAlbum {
