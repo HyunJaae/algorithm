@@ -1,0 +1,20 @@
+
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£›ö
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£›ö
+e	java:S117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã‰-
+S	java:S106"9Replace this use of System.out or System.err by a logger.(èâëİüÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(í¨€øÿÿÿÿ
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(í¬²…úÿÿÿÿ
+J
+java:S2864("4Iterate over the "entrySet" instead of the "keySet".(Å‰Ÿœ
+N	java:S106)"9Replace this use of System.out or System.err by a logger.(‘¼âÈ
+P
+java:S1854;"5Remove this useless assignment to local variable "k".(÷á‚†ùÿÿÿÿ
+N
+java:S1854:"8Remove this useless assignment to local variable "test".(ÎÒÇ·
+?
+java:S1481:")Remove this unused "test" local variable.(ÎÒÇ·
+A
+java:S1481;"&Remove this unused "k" local variable.(÷á‚†ùÿÿÿÿ
+N	java:S106@"9Replace this use of System.out or System.err by a logger.(“Íß¾
+P	java:S125?"<This block of commented-out lines of code should be removed.(ìŞ5
