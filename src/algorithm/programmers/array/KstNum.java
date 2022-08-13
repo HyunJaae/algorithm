@@ -16,7 +16,10 @@ public class KstNum {
             int[] arr = new int[v];
 
             // array 배열의 srcPos 번째 값부터 arr 배열의 destPos 번째에서 arr.length 길이만큼 차례로 복사
-            System.arraycopy(array, i - 1, arr, 0, arr.length);
+//            System.arraycopy(array, i - 1, arr, 0, arr.length);
+            for (int u = 0; u < arr.length; u++) {
+                arr[u] = array[i - 1 + u];
+            }
             Arrays.sort(arr);
             answer[y] = arr[k-1];
         }
