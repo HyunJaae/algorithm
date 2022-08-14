@@ -1,6 +1,6 @@
 package algorithm.programmers.array;
 
-public class LargeNum {
+public class LargestNum {
 
     public static String solution(int[] numbers) {
         String answer = "";
