@@ -14,6 +14,7 @@ public class HIndex {
 //        9, 9, 9, 12, 17
         for (int i = 0; i < citations.length; i++) {
             int a = citations.length - i;
+//            System.out.println("a : " + a);
 
             if (a > citations[i]) {
                 answer = a;
