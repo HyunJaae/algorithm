@@ -9,8 +9,6 @@ P
 .src/algorithm/programmers/hash/Camouflage.java,5/d/5d5692d4a2338a61ab9a7cfb22d00fc5af6eb132
 ^
 .src/algorithm/programmers/hash/Phonekemon.java,c/5/c549a343afb83defe803ed4a8f663199e17c4ccd
-[
-+src/algorithm/programmers/test/SixShop.java,5/c/5c326773a3d12afefc1796d9bff4c16cff9ab6fe
 Q
 !src/algorithm/baekjoon/B1037.java,2/1/21c33c39bfe073a2eafcd5770de21495ec9ece86
 Q
