@@ -19,6 +19,8 @@ public class Printer {
                 reload++;
             }
         }
+
+        answer = location;
         return answer;
     }
 
