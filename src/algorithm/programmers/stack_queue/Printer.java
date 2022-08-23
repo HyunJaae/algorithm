@@ -8,19 +8,21 @@ public class Printer {
         int answer = 0;
 
         Deque<Integer> deque = new LinkedList<>();
-        int reload = 0;
-        for (int i = 0; i < priorities.length; i++) {
-            if (deque.peek() == null || deque.peekLast() >= priorities[i]) {
-                deque.add(priorities[i]);
-            } else {
-                for (int j = reload; j < i; j++) {
-                    deque.add(deque.removeFirst());
+
+        for (int priority : priorities) {
+            deque.add(priority);
+        }
+
+        for (int i = 0; i < deque.size(); i++) {
+            int first = deque.peek();
+            for (int j = 0; j < deque.size(); j++) {
+                if (first < deque.peek()) {
+                    deque.pop();
                 }
-                reload++;
+                deque.add(deque.removeFirst());
             }
         }
 
-        answer = location;
         return answer;
     }
 
@@ -35,13 +37,13 @@ public class Printer {
         int location01 = 5;
         int location02 = 0;
 
-        int result = solution(priorities, location);
-        int result00 = solution(priorities00, location00);
-        int result01 = solution(priorities01, location01);
+//        int result = solution(priorities, location);
+//        int result00 = solution(priorities00, location00);
+//        int result01 = solution(priorities01, location01);
         int result02 = solution(priorities02, location02);
-        System.out.println(result);
-        System.out.println(result00);
-        System.out.println(result01);
+//        System.out.println(result);
+//        System.out.println(result00);
+//        System.out.println(result01);
         System.out.println(result02);
     }
 }
