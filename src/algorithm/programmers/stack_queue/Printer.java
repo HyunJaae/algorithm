@@ -1,25 +1,59 @@
 package algorithm.programmers.stack_queue;
 
-import java.util.Deque;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Printer {
     public static int solution(int[] priorities, int location) {
         int answer = 0;
 
-        Deque<Integer> deque = new LinkedList<>();
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
 
         for (int priority : priorities) {
-            deque.add(priority);
+            pq.add(priority);
         }
 
-        for (int i = 0; i < deque.size(); i++) {
-            int first = deque.peek();
-            for (int j = 0; j < deque.size(); j++) {
-                if (first < deque.peek()) {
-                    deque.pop();
+        while (!pq.isEmpty()){
+            for (int i = 0; i < priorities.length; i++) {
+                if(pq.peek() == null) break;
+                if (pq.peek() == priorities[i]) {
+                    pq.poll();
+                    answer++;
+                    if(location == i) {
+                        return answer;
+                    }
                 }
-                deque.add(deque.removeFirst());
+            }
+        }
+
+        return answer;
+    }
+
+    public static int solution00(int[] priorities, int location) {
+        int answer = 0;
+        int l = location;
+
+        Queue<Integer> que = new LinkedList<>();
+        for(int i : priorities){
+            que.add(i);
+        }
+
+        Arrays.sort(priorities);
+        int size = priorities.length-1;
+
+
+
+        while(!que.isEmpty()){
+            Integer i = que.poll();
+            if(i == priorities[size - answer]){
+                answer++;
+                l--;
+                if(l <0)
+                    break;
+            }else{
+                que.add(i);
+                l--;
+                if(l<0)
+                    l=que.size()-1;
             }
         }
 
@@ -37,13 +71,13 @@ public class Printer {
         int location01 = 5;
         int location02 = 0;
 
-//        int result = solution(priorities, location);
-//        int result00 = solution(priorities00, location00);
-//        int result01 = solution(priorities01, location01);
-        int result02 = solution(priorities02, location02);
-//        System.out.println(result);
-//        System.out.println(result00);
-//        System.out.println(result01);
+        int result = solution00(priorities, location);
+        int result00 = solution00(priorities00, location00);
+        int result01 = solution00(priorities01, location01);
+        int result02 = solution00(priorities02, location02);
+        System.out.println(result);
+        System.out.println(result00);
+        System.out.println(result01);
         System.out.println(result02);
     }
 }

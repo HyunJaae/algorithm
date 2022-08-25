@@ -27,3 +27,7 @@ R
 -src/algorithm/programmers/hash/PhoneBook.java,d/e/de9eda99376c0bc2460dafa966fe13f037bcad42
 \
 ,src/algorithm/programmers/hash/Marathon.java,5/a/5ad4eaa883a8f9e0b677e4ce2d69253326ec2f40
+[
++src/algorithm/programmers/test/SixShop.java,5/c/5c326773a3d12afefc1796d9bff4c16cff9ab6fe
+W
+'src/algorithm/programmers/test/Zum.java,c/8/c887d2c42abf0dcf20a1ff3fc277ffb10dbf2a34
