@@ -8,31 +8,29 @@ public class bridgeTruck {
         int answer = 0;
 
         Deque<Integer> dq = new LinkedList<>();
-        for (int truckWeight : truck_weights) {
-            dq.add(truckWeight);
+        for (int truck : truck_weights) {
+            dq.add(truck);
         }
+        Deque<Integer> resultDq = new LinkedList<>();
 
         while (!dq.isEmpty()) {
-            int total = 0;
-
+            int totalWeight = 0;
             for (int i = 0; i < bridge_length; i++) {
-                if (dq.isEmpty()) {
-                    answer++;
-                } else {
-                    int poll = dq.poll();
-                    total += poll;
-
-                    if (total <= weight) answer++;
-                    else {
-                        answer += bridge_length;
-                        dq.add(poll);
+                if (dq.peek() != null) {
+                    int pop = dq.pop();
+                    totalWeight += pop;
+                    if (totalWeight > weight) {
+                        dq.addFirst(pop);
+                    } else {
+                        resultDq.add(pop);
                     }
                 }
+                answer++;
             }
         }
-        if (truck_weights.length <= bridge_length) {
-            answer = answer + truck_weights.length;
-        }
+
+        if (truck_weights.length <= bridge_length) answer += resultDq.size();
+
         return answer;
     }
 
