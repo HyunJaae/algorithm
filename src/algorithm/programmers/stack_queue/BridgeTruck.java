@@ -102,11 +102,11 @@ public class BridgeTruck {
         int bridgeLength00 = 100;
         int weight = 10;
         int weight00 = 100;
-        int[] truckWeights = {7, 4, 5, 3};
+        int[] truckWeights = {7, 4, 5, 6};
         int[] truckWeights00 = {10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
         int[] truckWeights01 = {90, 90, 90, 90, 90};
 
-        System.out.println(solution(bridgeLength, weight, truckWeights));
-        System.out.println(solution(bridgeLength00, weight00, truckWeights01));
+        System.out.println(solution00(bridgeLength, weight, truckWeights));
+        System.out.println(solution00(bridgeLength00, weight00, truckWeights00));
     }
 }
