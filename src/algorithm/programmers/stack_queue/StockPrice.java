@@ -2,6 +2,7 @@ package algorithm.programmers.stack_queue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Stack;
 
 public class StockPrice {
 
@@ -28,10 +29,52 @@ public class StockPrice {
         return answer;
     }
 
-    public static void main(String[] args) {
-        int[] prices = {3, 4, 2, 2, 1};
+    public int[] solution00(int[] prices) {
+        int len = prices.length;
+        int[] answer = new int[len];
+        int i;
+        int j;
+        for (i = 0; i < len; i++) {
+            for (j = i + 1; j < len; j++) {
+                answer[i]++;
+                if (prices[i] > prices[j])
+                    break;
+            }
+        }
+        return answer;
+    }
 
+    public int[] solution01(int[] prices) {
+        Stack<Integer> beginIdxs = new Stack<>();
+        int i=0;
+        int[] terms = new int[prices.length];
+
+        beginIdxs.push(i);
+        for (i=1; i<prices.length; i++) {
+            while (!beginIdxs.empty() && prices[i] < prices[beginIdxs.peek()]) {
+                int beginIdx = beginIdxs.pop();
+                terms[beginIdx] = i - beginIdx;
+            }
+            beginIdxs.push(i);
+        }
+        while (!beginIdxs.empty()) {
+            int beginIdx = beginIdxs.pop();
+            terms[beginIdx] = i - beginIdx - 1;
+        }
+
+        return terms;
+    }
+
+    public static void main(String[] args) {
         StockPrice stockPrice = new StockPrice();
-        System.out.println(Arrays.toString(stockPrice.solution(prices)));
+
+        int[] prices = {3, 4, 2, 2, 1};
+        String result = Arrays.toString(stockPrice.solution(prices));
+        String result00 = Arrays.toString(stockPrice.solution00(prices));
+        String result01 = Arrays.toString(stockPrice.solution01(prices));
+
+
+        System.out.println(result.equals(result00));
+        System.out.println(result.equals(result01));
     }
 }
