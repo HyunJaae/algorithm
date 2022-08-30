@@ -14,8 +14,9 @@ public class StockPrice {
             int a = prices[i];
             int s = 0;
             for (int j = 1 + i; j < prices.length; j++) {
-                if (prices[j] >= a) {
-                    s++;
+                s++;
+                if (prices[j] < a) {
+                    break;
                 }
             }
             list.add(s);
@@ -28,7 +29,7 @@ public class StockPrice {
     }
 
     public static void main(String[] args) {
-        int[] prices = {1, 2, 3, 2, 3};
+        int[] prices = {3, 4, 2, 2, 1};
 
         StockPrice stockPrice = new StockPrice();
         System.out.println(Arrays.toString(stockPrice.solution(prices)));
