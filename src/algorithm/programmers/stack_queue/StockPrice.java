@@ -57,6 +57,7 @@ public class StockPrice {
             }
             beginIdxs.push(i);
         }
+
         while (!beginIdxs.empty()) {
             int beginIdx = beginIdxs.pop();
             terms[beginIdx] = i - beginIdx - 1;
@@ -76,5 +77,6 @@ public class StockPrice {
 
         System.out.println(result.equals(result00));
         System.out.println(result.equals(result01));
+        System.out.println(result01);
     }
 }
