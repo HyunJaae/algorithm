@@ -13,17 +13,17 @@ public class B11279 {
         StringBuilder sb = new StringBuilder();
         int T = Integer.parseInt(br.readLine());
 
-        PriorityQueue<Integer> heep = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> heap = new PriorityQueue<>(Collections.reverseOrder());
         for (int i =0; i < T; i++) {
             int X = Integer.parseInt(br.readLine());
 
             if(X != 0) {
-                heep.add(X);
-            } else if(heep.isEmpty()) {
+                heap.add(X);
+            } else if(heap.isEmpty()) {
                 sb.append(0 + "\n");
             }
             else {
-                sb.append(heep.poll()).append("\n");
+                sb.append(heap.poll()).append("\n");
             }
         }
         System.out.println(sb);
