@@ -1,0 +1,12 @@
+
+c
+java:S11929"MDefine a constant instead of duplicating this literal "solution00: " 4 times.(¹‡™
+Q	java:S125"<This block of commented-out lines of code should be removed.(†Ê¥
+N	java:S1064"9Replace this use of System.out or System.err by a logger.(¾˜›…
+N	java:S1065"9Replace this use of System.out or System.err by a logger.(ŞÓ¢¦
+N	java:S1066"9Replace this use of System.out or System.err by a logger.(èÌÀ½
+S	java:S1067"9Replace this use of System.out or System.err by a logger.(Š§Æøşÿÿÿÿ
+N	java:S1069"9Replace this use of System.out or System.err by a logger.(¹‡™
+N	java:S106:"9Replace this use of System.out or System.err by a logger.(ôîšï
+N	java:S106;"9Replace this use of System.out or System.err by a logger.(½Í·
+S	java:S106<"9Replace this use of System.out or System.err by a logger.(¡¯âÒúÿÿÿÿ

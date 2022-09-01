@@ -15,6 +15,14 @@ public class Spicier {
 
         while (!heap.isEmpty()) {
             answer++;
+            int all = 0;
+            for (int h : heap) {
+                all += h;
+            }
+            if (all >= heap.size() * K) {
+                break;
+            }
+
             if (heap.size() >= 2) {
                 int a = heap.poll();
                 if(heap.peek() == null) {
