@@ -11,13 +11,12 @@ public class DiskController {
         Arrays.sort(jobs, Comparator.comparingInt(o1 -> o1[0]));
 
         PriorityQueue<Integer> timeQue = new PriorityQueue<>();
+        timeQue.add(jobs[0][0]);
         // 요청 시간으로부터 순차적으로 진행 했을 때
-        int time = 0;
-        for (int[] job : jobs) {
-            time += time + job[1] - job[0];
-            System.out.println(time);
+        while (!timeQue.isEmpty()) {
+            answer++;
+
         }
-        timeQue.add(time / 3);
 
         answer = timeQue.remove();
         return answer;
