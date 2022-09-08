@@ -1,24 +1,28 @@
 package algorithm.programmers.heap;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class DiskController {
     public int solution(int[][] jobs) {
         int answer = 0;
-        // 각 배열의 0번째 요소로 정렬 -> 요청 시간별로 정렬
+
         Arrays.sort(jobs, Comparator.comparingInt(o1 -> o1[0]));
+        answer = jobs[0][1];
+        Deque<Integer> dq = new LinkedList<>();
+        dq.add(jobs[1][0]);
 
-        PriorityQueue<Integer> timeQue = new PriorityQueue<>();
-        timeQue.add(jobs[0][0]);
-        // 요청 시간으로부터 순차적으로 진행 했을 때
-        while (!timeQue.isEmpty()) {
+        while (!dq.isEmpty()) {
             answer++;
-
+            for (int i = 0; i < jobs.length; i++) {
+                if (answer == jobs[i][1]) {
+                    dq.poll();
+                } else if (dq.peek() <= jobs[i][0]) {
+                    if ()
+                    dq.add(jobs[i][0]);
+                }
+            }
         }
 
-        answer = timeQue.remove();
         return answer;
     }
 
