@@ -7,21 +7,22 @@ public class DiskController {
         int answer = 0;
 
         Arrays.sort(jobs, Comparator.comparingInt(o1 -> o1[0]));
-        answer = jobs[0][1];
-        Deque<Integer> dq = new LinkedList<>();
-        dq.add(jobs[1][0]);
 
-        while (!dq.isEmpty()) {
-            answer++;
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        pq.add(jobs[0][1]);
+
+        while (!pq.isEmpty()) {
             for (int i = 0; i < jobs.length; i++) {
-                if (answer == jobs[i][1]) {
-                    dq.poll();
-                } else if (dq.peek() <= jobs[i][0]) {
-                    if ()
-                    dq.add(jobs[i][0]);
+                if (pq.peek() == null) break;
+                if (pq.peek() > jobs[i][0]) {
+                    pq.add(pq.peek() - jobs[i][0] + jobs[i][1]);
+                } else {
+                    pq.poll();
+                    pq.add(jobs[i][1]);
                 }
             }
         }
+
 
         return answer;
     }
