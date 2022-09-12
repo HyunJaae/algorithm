@@ -1,7 +1,0 @@
-
-^
-java:S1192X"HDefine a constant instead of duplicating this literal "classic" 3 times.(Ÿ–Ÿç
-S	java:S106"9Replace this use of System.out or System.err by a logger.(â¡•úÿÿÿÿ
-h
-java:S3776*"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ü—­ñ
-S	java:S106f"9Replace this use of System.out or System.err by a logger.(ø¹ûøøÿÿÿÿ

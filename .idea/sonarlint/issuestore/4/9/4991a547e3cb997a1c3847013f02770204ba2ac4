@@ -1,8 +1,0 @@
-
-M	java:S106'"9Replace this use of System.out or System.err by a logger.(™Ù˜G
-S	java:S106("9Replace this use of System.out or System.err by a logger.(á½êÓùÿÿÿÿ
-M	java:S106)"9Replace this use of System.out or System.err by a logger.(ÒËÖ'
-S	java:S106*"9Replace this use of System.out or System.err by a logger.(éŠ¾¢üÿÿÿÿ
-N	java:S106+"9Replace this use of System.out or System.err by a logger.(¥éÉ†
-J
-java:S1128"/Remove this unused import 'java.sql.SQLOutput'.(ê¤òÃùÿÿÿÿ
