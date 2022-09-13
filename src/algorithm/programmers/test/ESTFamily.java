@@ -51,12 +51,13 @@ public class ESTFamily {
             dq.add(q);
         }
 
-        while () {
+        while (true) {
             for (int j : queue) {
                 if (j == 1) arr[0]++;
                 if (j == 2) arr[1]++;
                 if (j == 3) arr[2]++;
             }
+            break;
         }
 
         return answer;
