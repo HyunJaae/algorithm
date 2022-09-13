@@ -31,8 +31,6 @@ R
 +src/algorithm/programmers/test/SixShop.java,5/c/5c326773a3d12afefc1796d9bff4c16cff9ab6fe
 W
 'src/algorithm/programmers/test/Zum.java,c/8/c887d2c42abf0dcf20a1ff3fc277ffb10dbf2a34
-]
--src/algorithm/programmers/hash/BestAlbum.java,2/1/210e4142a65b2348c918e89851e199dd96d00d7c
 b
 2src/algorithm/programmers/stack_queue/Printer.java,7/5/75089032680ed585a64dd7ec725d11b6e4e11db9
 [
@@ -47,8 +45,6 @@ _
 /src/algorithm/programmers/array/LargestNum.java,b/1/b10a484ddf7b63a4f34ac78f9b6ab0e04e2b51c5
 b
 2src/algorithm/programmers/stack_queue/SameNum.java,8/9/897adaa7f6991def2f13f108d9dea41e89b4ba04
-g
-7src/algorithm/programmers/stack_queue/RightBracket.java,4/9/4991a547e3cb997a1c3847013f02770204ba2ac4
 f
 6src/algorithm/programmers/stack_queue/FunctionDev.java,c/8/c8af52729faf8f5ccd0eb9692412fd76ad58b3ab
 R
