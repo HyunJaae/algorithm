@@ -1,6 +1,4 @@
 
-P
- src/algorithm/baekjoon/Main.java,4/2/4212a8cfb8b85687af5d80ff31a746d611457195
 =
 Algorithm.iml,9/e/9e5d20d3d95893377dd5a0da713140b86414eef4
 \
@@ -9,14 +7,6 @@ P
 .src/algorithm/programmers/hash/Camouflage.java,5/d/5d5692d4a2338a61ab9a7cfb22d00fc5af6eb132
 ^
 .src/algorithm/programmers/hash/Phonekemon.java,c/5/c549a343afb83defe803ed4a8f663199e17c4ccd
-Q
-!src/algorithm/baekjoon/B1037.java,2/1/21c33c39bfe073a2eafcd5770de21495ec9ece86
-Q
-!src/algorithm/baekjoon/B1927.java,d/5/d526217933523c938e54221af882a7ac4631b2fd
-Q
-!src/algorithm/baekjoon/B1934.java,f/9/f94c64b90551aa933f0f1052d9c222e02f506255
-Q
-!src/algorithm/baekjoon/B2609.java,0/6/06efdd0f3d1cfc759025d278e045c0d557a544b7
 Q
 !src/algorithm/baekjoon/B4949.java,1/b/1b859c31860c62d13ea54cb8024ebf53c4416110
 Q
