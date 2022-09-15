@@ -1,15 +1,15 @@
 package algorithm.baekjoon;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class  IO{
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in); // System.in 은 입력한 값을 Byte 단위로 읽는 것을 뜻합니다.
-        int A = sc.nextInt();
-        int B = sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // System.in 은 입력한 값을 Byte 단위로 읽는 것을 뜻합니다.
 
-        System.out.println((A + B) + "\n" + (A - B) + "\n" + (A * B) + "\n" + (A / B) + "\n" + (A % B));
+        String id = br.readLine();
 
-        sc.close();
+        System.out.println(id + "??!");
     }
 }
