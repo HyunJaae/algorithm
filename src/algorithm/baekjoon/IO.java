@@ -1,15 +1,23 @@
 package algorithm.baekjoon;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class  IO{
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in)); // System.in 은 입력한 값을 Byte 단위로 읽는 것을 뜻합니다.
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        StringBuilder sb = new StringBuilder();
+        int[] chess = {1, 1, 2, 2, 2, 8};
 
-        String id = br.readLine();
+        for (int piece : chess) {
+            int wp = sc.nextInt();
+            if (piece != wp) {
+                sb.append(piece - wp);
+            } else {
+                sb.append(0);
+            }
+            sb.append(" ");
+        }
 
-        System.out.println(id + "??!");
+        System.out.println(sb);
     }
 }
