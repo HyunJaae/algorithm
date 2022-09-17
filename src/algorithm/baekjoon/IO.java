@@ -1,23 +1,49 @@
 package algorithm.baekjoon;
 
-import java.util.Scanner;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 
 public class  IO{
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        StringBuilder sb = new StringBuilder();
-        int[] chess = {1, 1, 2, 2, 2, 8};
+    public static void main(String[] args) throws IOException {
+        System.out.println("\\    /\\");
+        System.out.println(" )  ( ')");
+        System.out.println("(  /  )");
+        System.out.println(" \\(__)|");
 
-        for (int piece : chess) {
-            int wp = sc.nextInt();
-            if (piece != wp) {
-                sb.append(piece - wp);
-            } else {
-                sb.append(0);
-            }
-            sb.append(" ");
-        }
+        System.out.println("\n");
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("|\\_/|\n");
+        sb.append("|q p|   /}\n");
+        sb.append("( 0 )\"\"\"\\\n");
+        sb.append("|\"^\"`    |\n");
+        sb.append("||_/=\\\\__|");
 
         System.out.println(sb);
+
+        System.out.println("\n");
+
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        bw.write("         ,r'\"7");
+        bw.newLine();
+
+        bw.write("r`-_   ,'  ,/");
+        bw.newLine();
+
+        bw.write(" \\. \". L_r'");
+        bw.newLine();
+
+        bw.write("   `~\\/");
+        bw.newLine();
+
+        bw.write("      |");
+        bw.newLine();
+
+        bw.write("      |");
+
+        bw.flush();
+        bw.close();
     }
 }
