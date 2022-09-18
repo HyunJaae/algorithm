@@ -1,8 +1,6 @@
 package algorithm.baekjoon;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
+import java.io.*;
 
 public class  IO{
     public static void main(String[] args) throws IOException {
