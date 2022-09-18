@@ -1,5 +1,6 @@
 package algorithm.concept;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -21,6 +22,8 @@ public class InputTest {
         int b = scanner.nextInt();
         System.out.println(b);
 
-        InputStreamReader sr = new InputStreamReader(inputStream);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int s = Integer.parseInt(br.readLine());
+        System.out.println("bufferedReader " + s);
     }
 }
