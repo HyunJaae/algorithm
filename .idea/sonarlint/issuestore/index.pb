@@ -9,8 +9,6 @@
 .src/algorithm/programmers/hash/Phonekemon.java,c/5/c549a343afb83defe803ed4a8f663199e17c4ccd
 Q
 !src/algorithm/baekjoon/B4949.java,1/b/1b859c31860c62d13ea54cb8024ebf53c4416110
-Q
-!src/algorithm/baekjoon/B9012.java,0/2/02a80e5d7c598fae263a7e60769be4a36adc8879
 R
 "src/algorithm/baekjoon/B11050.java,8/1/812c0dff87331273f6df7c4797daebf8fbb17386
 ]
@@ -49,14 +47,8 @@ g
 7src/algorithm/programmers/stack_queue/RightBracket.java,4/9/4991a547e3cb997a1c3847013f02770204ba2ac4
 Q
 !src/algorithm/baekjoon/B1037.java,2/1/21c33c39bfe073a2eafcd5770de21495ec9ece86
-P
- src/algorithm/baekjoon/Main.java,4/2/4212a8cfb8b85687af5d80ff31a746d611457195
 b
 2src/algorithm/programmers/heap/DiskController.java,e/8/e8fd8be71bf447c6211ac530c63ee7352c35ec4d
-N
-src/algorithm/baekjoon/IO.java,6/d/6d0aab5934ab691c4b477e2eb59c78a39b50846f
-T
-$src/algorithm/concept/InputTest.java,d/b/db1ddb1088fb661cd2fb3d1c8f5ccec168c446ab
 Q
 !src/algorithm/baekjoon/B1927.java,d/5/d526217933523c938e54221af882a7ac4631b2fd
 Q
@@ -67,7 +59,5 @@ Q
 0src/algorithm/baekjoon/conditional/Quadrant.java,1/e/1ee37a3f94aa28a08ca855b17f0c959d4b7dedab
 _
 /src/algorithm/baekjoon/conditional/ExScore.java,e/4/e41ae2d416a497fd5434b1620157e70e92bdc346
-`
-0src/algorithm/baekjoon/conditional/LeapYear.java,1/2/121d03bfbfad1a4c963436239d7ba48cb9d55414
 d
 4src/algorithm/baekjoon/conditional/CompareWords.java,f/d/fdecf3d224734025b326038305f929236c01674a
