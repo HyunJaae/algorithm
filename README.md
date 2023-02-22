@@ -1,1 +1,1 @@
-# 🤖 ALGORITHM 필요 개념 정리
+# ALGORITHM
