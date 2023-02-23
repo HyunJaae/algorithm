@@ -1,19 +1,0 @@
-
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡Ìîş
-k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì Ë®úÿÿÿÿ
-k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»áâ×ûÿÿÿÿ
-k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓæÕñıÿÿÿÿ
-f	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á¤Ù‘
-e	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õ¢Õ+
-M	java:S106"9Replace this use of System.out or System.err by a logger.(ıÄêP
-S	java:S106"9Replace this use of System.out or System.err by a logger.(¯Šà“øÿÿÿÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(ÅÍÂÙ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(áéÂ 
-Z
-java:S3358"DExtract this nested ternary operation into an independent statement.(áéÂ 
-U	java:S106"9Replace this use of System.out or System.err by a logger.(â¦Ç8¶Ãá¡µ0
-a
-java:S3358"DExtract this nested ternary operation into an independent statement.(â¦Ç8Ü¿â¡µ0
-Z	java:S106%"9Replace this use of System.out or System.err by a logger.(”Ï³øüÿÿÿÿ8İ¿â¡µ0
-f
-java:S3358%"DExtract this nested ternary operation into an independent statement.(”Ï³øüÿÿÿÿ8¶Ãá¡µ0
