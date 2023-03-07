@@ -8,10 +8,23 @@
  */
 using namespace std;
 string a;
+int b;
+double c;
+char d;
+char e[20];
+long f;
 int main()
 {
+    // cin 은 개행문자(띄어쓰기, 줄바꿈)까지 읽는다.
     cin >> a;
     cout << a << "\n";
+
+    scanf("%d %lf %c %s %ld", &b, &c, &d, e, &f);
+    printf("%d\n", b);
+    printf("%lf\n", c);
+    printf("%c\n", d);
+    printf("%s\n", e);
+    printf("%ld\n", f);
     /**
      * 프로세스를 정상적으로 마무리한다는 의미 (process exit call success)
      * 또한 C++ 은 cpp 파일당 하나의 main 함수만을 만들 수 있다.
