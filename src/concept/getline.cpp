@@ -8,6 +8,7 @@ using namespace std;
  * 그 이유는 cin으로 입력을 받을 때 개행 문자까지 입력을 받게 되면
  * 중간에 위치한 버퍼에 \n 이 남아있게 되는데 이를 없애주기 위해 getline(cin, 특정문자열); 을 사용한다.
  * (keyboard -> Input Buffer -> Program)
+ * Input Buffer 에 \n 이 남게 된다.
  */
 int T;
 string s;
