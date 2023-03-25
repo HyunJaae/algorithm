@@ -8,6 +8,7 @@ void a()
     cout << ret << "\n";
     return;
 }
+/* double 타입 반환 */
 /* 함수를 선언할 때는 항상 호출되는 위쪽 부분에 선언해야 한다. */
 double b()
 {
@@ -20,13 +21,41 @@ double b()
  */
 double c();
 
+/* char, 문자 */
+char d()
+{
+    char a = 'a';
+    return a;
+}
+
+/* string, 문자열 */
+int str()
+{
+    string a = "나는야";
+    /**
+     * 문자열을 [0] 로 접근한다는 의미는 1바이트씩 출력한다는 것을
+     * 의미한다. 한글의 경우 한 글자당 3바이트이기 때문에 a[0]은 이상한 문자를 출력한다.
+     * 따라서 a[0] ~ a[2] 는 문자열 "나는야" 에서 "나" 부분만을 출력한다.
+     */
+    cout << a[0] << "\n";
+    cout << a[0] << a[1] << a[2] << '\n';
+    cout << a << "\n";
+    string b = "abc";
+    cout << b[0] << "\n";
+    cout << b << "\n";
+    return 0;
+}
+
 int main()
 {
     a();
     double ret = b();
     cout << ret << "\n";
-    double ret = c();
+    ret = c();
     cout << ret << "\n";
+    char a = d();
+    cout << a << "\n";
+    str();
     return 0;
 }
 
