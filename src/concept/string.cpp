@@ -1,5 +1,45 @@
 #include <bits/stdc++.h>
 using namespace std;
+int func_reverse()
+{
+    string a = "It's hard to have a sore leg";
+    reverse(a.begin(), a.end());
+    cout << a << '\n';
+    reverse(a.begin(), a.end());
+    cout << a << '\n';
+    reverse(a.begin() + 3, a.end());
+    cout << a << '\n';
+
+    return 0;
+}
+
+typedef long long ll;
+int ascii()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    string s = "123";
+    cout << s[0] << '\n';
+    /**
+     * s[0] 인 "1"은 아스키코드에서 49이고 49에 1을 더한 값인 50은
+     * 아스키코드에서 2이기 때문에 123 에서 223이 된다.
+     * 즉, 문자열에서 + 하는 연산은 "아스키코드"를 기반으로 수행된다.
+     * 문자열을 이루는 문자는 아스키(ASCII) 값(0에서 127 사이의 정수)로
+     * 저장되어 구현된다.
+     * 예를 들어 'A'의 ASCII 값은 65이다. 이는 문자 변수에 'A'를 할당하면
+     * 'A' 자체가 아니라 65라는 숫자가 해당 변수에 저장된다는 것이다.
+     */
+    s[0]++;
+    cout << s << "\n"; // 223
+    /* 'a' 문자의 아스키 코드 출력 */
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    char a = 'a';
+    cout << "ascii 'a' = " << (int)a << '\n';
+
+    return 0;
+}
 
 int main()
 {
@@ -51,6 +91,9 @@ int main()
     특정 위치에서 크기만큼의 문자열을 추출, O(n)의 시간복잡도
     */
     cout << a.substr(5, 2) << '\n';
+
+    ascii();
+    func_reverse();
 
     return 0;
 }
