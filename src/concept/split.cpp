@@ -5,8 +5,8 @@ int func_atoi()
 {
     string s = "1";
     string s2 = "amumu";
-    cout << atoi(s.c_str()) << '\n';
-    cout << atoi(s2.c_str()) << '\n';
+    cout << atoi(s.c_str()) << " : 정수형인 경우" << '\n';
+    cout << atoi(s2.c_str()) << " : 문자열인 경우" << '\n';
     return 0;
 }
 
@@ -48,7 +48,8 @@ int main()
     for (string b : a)
         cout << b << '\n';
 
+    cout << "=========범위기반 for 루프==========" << '\n';
     func_vector();
-    cout << "문자열을 정수형으로 변환" << '\n';
+    cout << "========문자열이 정수형인지 확인=========" << '\n';
     func_atoi();
 }
