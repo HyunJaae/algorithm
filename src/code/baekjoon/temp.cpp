@@ -1,12 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
-long long int a, b, c;
+int h, m;
 int main() {
-    cout << "|\\_/|" << '\n';
-    cout << "|q p|   /}" << '\n';
-    cout << "( 0 )\"\"\"\\" << '\n';
-    cout << "|\"^\"`    |" << '\n';
-    cout << "||_/=\\\\__|" << '\n';
+    cin >> h >> m;
+
+    // if(h == 0) {
+    //     h = (m < 45)? 23 : h;
+    //     m = (m < 45)? m + 15 : m - 45;
+    // } else {
+    //     h = (m < 45)? h - 1 : h;
+    //     m = (m < 45)? m + 15 : m - 45;
+    // }
+
+    if(m < 45) {
+        h = (h == 0)? 23 : h - 1;
+        m = m + 15;
+    } else {
+        m = m - 45;
+    }
+    cout << h << " " << m << '\n';
     return 0;
 }
 
