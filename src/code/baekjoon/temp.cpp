@@ -1,9 +1,13 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-int n;
+int A, B;
 int main() {
-    cin >> n;
-    cout << n * (n+1) / 2 << '\n';
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+ 
+    while(cin >> A >> B) {
+        cout << A + B << '\n';
+    }
     return 0;
 }
 
