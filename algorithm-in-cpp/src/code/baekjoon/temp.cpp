@@ -3,17 +3,21 @@
 
 using namespace std;
 int N;
+int mini = 1000001;
+int maxi = -1000001;
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
     cin >> N;
-    int arr[N];
+    int inputVal;
     for(int i = 0; i < N; i++) {
-        cin >> arr[i];
+        cin >> inputVal;
+        mini = min(mini, inputVal);
+        maxi = max(maxi, inputVal);
     }
-    sort(arr, arr+N);
-    cout << arr[0] << " " << arr[N-1] << '\n';
+
+    cout << mini << ' ' << maxi << '\n';
 
     return 0;
 }
