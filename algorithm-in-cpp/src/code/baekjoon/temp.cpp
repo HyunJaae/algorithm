@@ -1,20 +1,19 @@
 #include <iostream>
+#include <algorithm>
+
 using namespace std;
-int N, X;
+int N;
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    cin >> N >> X;
+    cin >> N;
     int arr[N];
     for(int i = 0; i < N; i++) {
-        int arrVal;
-        cin >> arrVal;
-        arr[i] = arrVal;
+        cin >> arr[i];
     }
-    for(int i = 0; i < N; i++) {
-        if(arr[i] < X) cout << arr[i] << '\n';
-    }
+    sort(arr, arr+N);
+    cout << arr[0] << " " << arr[N-1] << '\n';
 
     return 0;
 }
