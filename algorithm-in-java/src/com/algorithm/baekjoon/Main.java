@@ -18,6 +18,7 @@ public class Main {
         }
         int max = Collections.max(list);
         int inputIndex = list.indexOf(max) + 1;
-        System.out.println(max + "\n" + inputIndex);
+        System.out.println(max);
+        System.out.println(inputIndex);
     }
 }
