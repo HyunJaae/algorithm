@@ -1,23 +1,22 @@
 #include <iostream>
-#include <algorithm>
 
 using namespace std;
-int N;
-int mini = 1000001;
-int maxi = -1000001;
+int maxValue = 0;
+int maxValueIndex = 0;
+int num;
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    
-    cin >> N;
-    int inputVal;
-    for(int i = 0; i < N; i++) {
-        cin >> inputVal;
-        mini = min(mini, inputVal);
-        maxi = max(maxi, inputVal);
+
+    for(int i = 0; i < 9; i++) {
+        cin >> num;
+        if(maxValue < num) {
+            maxValue = num;
+            maxValueIndex = i;
+        }
     }
 
-    cout << mini << ' ' << maxi << '\n';
+    cout << maxValue << '\n' << maxValueIndex + 1 << '\n';
 
     return 0;
 }
