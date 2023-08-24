@@ -3,10 +3,7 @@ package com.algorithm.baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Main {
 
@@ -24,10 +21,16 @@ public class Main {
             int j = Integer.parseInt(st.nextToken());
             int k = Integer.parseInt(st.nextToken());
 
-            IntStream.range(i - 1, j).forEach(w -> arr[w] = k);
+            for (int w = i - 1; w < j; w++) {
+                arr[w] = k;
+            }
         }
 
-        String sb = Arrays.stream(arr).mapToObj(i -> i + " ").collect(Collectors.joining());
+        StringBuilder sb = new StringBuilder();
+
+        for (int v : arr) {
+            sb.append(v).append(" ");
+        }
 
         System.out.println(sb);
     }
