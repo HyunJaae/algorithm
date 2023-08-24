@@ -3,7 +3,7 @@ package com.algorithm.baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -16,19 +16,19 @@ public class Main {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
 
-        HashMap<Integer, Integer> bucket = IntStream.range(0, n).boxed().collect(Collectors.toMap(i -> i + 1, i -> 0, (a, b) -> b, HashMap::new));
+        int[] arr = new int[n];
 
-        for(int s = 0; s < m; s++) {
+        for (int q = 0; q < m; q++) {
             st = new StringTokenizer(br.readLine(), " ");
             int i = Integer.parseInt(st.nextToken());
             int j = Integer.parseInt(st.nextToken());
             int k = Integer.parseInt(st.nextToken());
 
-            IntStream.rangeClosed(i, j).forEach(t -> bucket.put(t, k));
+            IntStream.range(i - 1, j).forEach(w -> arr[w] = k);
         }
-        String sb = bucket.values().stream().mapToInt(value -> value).mapToObj(value -> value + " ").collect(Collectors.joining());
+
+        String sb = Arrays.stream(arr).mapToObj(i -> i + " ").collect(Collectors.joining());
 
         System.out.println(sb);
-
     }
 }
