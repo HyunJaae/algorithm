@@ -1,23 +1,33 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
-int maxValue = 0;
-int maxValueIndex = 0;
-int num;
+
+int arr[101];
+int n = 0;
+int m = 0;
+int i, j, k;
+string result;
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    for(int i = 0; i < 9; i++) {
-        cin >> num;
-        if(maxValue < num) {
-            maxValue = num;
-            maxValueIndex = i;
+    memset(arr, 0, sizeof(arr));
+    cin >> n >> m;
+    
+
+    for(int o = 0; o < m; o++) {
+        cin >> i >> j >> k;
+        for(int q = i - 1; q < j; q++) {
+            arr[q] = k;
         }
     }
 
-    cout << maxValue << '\n' << maxValueIndex + 1 << '\n';
-
+    for(int q = 0; q < n; q++) {
+        cout << arr[q] << ' ';
+    }
+    cout << '\n';
+    
     return 0;
 }
 
