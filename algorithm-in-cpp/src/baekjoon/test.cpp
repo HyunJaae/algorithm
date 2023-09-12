@@ -1,37 +1,24 @@
 #include <iostream>
+#include <utility>
 #include <vector>
 #include <algorithm>
 
 using namespace std;
 
-void print(vector<int> b) {
-    sort(b.begin(), b.end());
-    for(int i : b) cout << i << ' ';
-    cout << '\n';
-}
-
-int arr[9];
-vector<int> result;
-int n = 9, r = 7;
-void combi(int start, vector<int> b) {
-    if(b.size() == r) {
-        int sum = 0;
-        for (int i : b) sum += i;
-        sort(b.begin(), b.end());
-        if (sum == 100) {
-            for (int i : b) cout << i << '\n';
-            exit(0);
+// 난쟁이 9명 중 7명의 키의 합이 100
+// 9명의 키 합 - 비난쟁이 2명의 합 = 100
+int n = 9, r = 7, sum = 0, a[9];
+vector<int> v;
+pair<int, int> p;
+void solve() {
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < i; j++) {
+            if(sum - a[i] - a[j] == 100) {
+                p = {i, j};
+                return;
+            }
         }
-        result = b;
-        return;
     }
-
-    for (int i = start + 1; i < n; i++) {
-        b.push_back(arr[i]);
-        combi(i, b);
-        b.pop_back();
-    }
-    return;
 }
 
 int main() {
@@ -40,12 +27,17 @@ int main() {
     cout.tie(NULL);
 
     for(int i = 0; i < n; i++) {
-        cin >> arr[i];
+        cin >> a[i];
+        sum += a[i];
     }
-    
-    vector<int> b;
-    combi(-1, b);
-    for (int i : result) cout << i << '\n';
+    solve();
+    for (int i = 0; i < n; i++) {
+        if(p.first == i || p.second == i) continue;
+        v.push_back(a[i]);
+    }
+    sort(v.begin(), v.end());
+    for (int i : v) cout << i << ' ';
+    cout << '\n';
 
     return 0;
 }
