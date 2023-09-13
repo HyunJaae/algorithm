@@ -1,44 +1,43 @@
 #include <iostream>
-#include <utility>
 #include <vector>
-#include <algorithm>
-
 using namespace std;
 
-// 난쟁이 9명 중 7명의 키의 합이 100
-// 9명의 키 합 - 비난쟁이 2명의 합 = 100
-int n = 9, r = 7, sum = 0, a[9];
-vector<int> v;
-pair<int, int> p;
-void solve() {
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < i; j++) {
-            if(sum - a[i] - a[j] == 100) {
-                p = {i, j};
-                return;
-            }
-        }
+vector<char> split(string input) {
+    vector<char> ret;
+    int length = input.length();
+    for (int i = 0; i < length; i++) {
+        char s = *input.begin();
+        ret.push_back(s);
+        input.erase(0, 1);
     }
+    return ret;
 }
-
+// given 소문자로 이루어진 영어 단어
+// 영어 단어에서 알파벳이 몇 개씩 있는지 확인
+// apple -> 10001000000100020000000000
+// 1. 영단어 -> 알파벳으로 분리
+// 2. 알파벳 배열과 비교해서 인덱스 값 구하기
+// 3. 0으로 초기화된 알파벳 배열과 동일한 길이의 배열의 해당 인덱스 값에 +1
+string s;
+char alphabet[26] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+int result[26]{};
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
 
-    for(int i = 0; i < n; i++) {
-        cin >> a[i];
-        sum += a[i];
+    cin >> s;
+    vector<char> v = split(s);
+    for (int i = 0; i < 26; i++) {
+        for (char j : v) {
+            if (alphabet[i] == j) {
+                result[i] = result[i] + 1;
+            }
+        }
     }
-    solve();
-    for (int i = 0; i < n; i++) {
-        if(p.first == i || p.second == i) continue;
-        v.push_back(a[i]);
-    }
-    sort(v.begin(), v.end());
-    for (int i : v) cout << i << ' ';
-    cout << '\n';
 
+    for (int i : result) cout << i << ' ';
+    cout << '\n';
     return 0;
 }
 
