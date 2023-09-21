@@ -1,14 +1,31 @@
 #include <iostream>
+#include <map>
 using namespace std;
 
-string str;
-int cnt[26];
+map<char, int> m;
+int N;
+string firstName;
 int main() {
-    ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-    cin >> str;
-    for (char c : str) cnt[c - 'a']++;
-    for (int i : cnt) cout << i << ' ';
+    cin >> N;
+    for(int i = 0; i < N; i++) {
+        cin >> firstName;
+        char ff = firstName.front();
+        if (m.find(ff) != m.end()) {
+            m[ff]++;
+            continue;
+        }
+        m[ff] = 1;
+    }
+    bool check = true;
+    for (auto v : m) {
+        if (v.second >= 5) {
+            cout << v.first;
+            check = false;
+        }
+    }
+    if (check) cout << "PREDAJA";
     cout << '\n';
+
     return 0;
 }
 
