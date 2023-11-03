@@ -2,26 +2,23 @@
 #include <string>
 using namespace std;
 
-string s, temp;
+string s;
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
     getline(cin, s);
-    for (char c : s) {
-        if (c < 58 || c == ' ') {
-            temp += c;
-            continue;
+    
+    for (int i = 0; i < s.size(); i++) {
+        if (s[i] >= 65 && s[i] < 91) {
+            if (s[i] + 13 > 90) s[i] = s[i] + 13 - 26;
+            else s[i] = s[i] + 13;
         }
-        if (c - 'a' < 0) {
-            if ((c-'A') + 13 >= 26) {
-                temp += c+13-26;
-            } else temp += c+13;
-        } else {
-            if ((c - 'a') + 13 >= 26) {
-                temp += c+13-26;
-            } else temp += c+13;
+        if (s[i] >= 97 && s[i] < 123) {
+            if (s[i] + 13 > 122) s[i] = s[i] + 13 - 26;
+            else s[i] = s[i] + 13;
         }
     }
-    cout << temp << '\n';
+    cout << s << '\n';
+
     return 0;
 }
 
