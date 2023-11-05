@@ -12,10 +12,8 @@ int main() {
     last = pattern.substr(pos + 1);
     for (int i = 0; i < N; i++) {
         cin >> fileName;
-        // if (fileName.size() < first.size() + last.size()) cout << "NE\n";
-        if (fileName.size() < pos || fileName.size() < last.size()) {
-            cout << "NE\n";
-        } else {
+        if (fileName.size() < first.size() + last.size()) cout << "NE\n";
+        else {
             if (fileName.substr(0, pos) == first && fileName.substr(fileName.size() - last.size()) == last) cout << "DA\n";
             else cout << "NE\n";
         }
