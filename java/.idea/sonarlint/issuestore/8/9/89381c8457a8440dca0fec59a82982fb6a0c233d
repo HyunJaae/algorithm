@@ -1,8 +1,8 @@
 
-L	java:S106"+Replace this use of System.out by a logger.(®ıáëûÿÿÿÿ8«Ößˆ2
-M
-java:S1172"+Remove this unused method parameter "args".(ï±ÅÅøÿÿÿÿ8«Ößˆ2
-L	java:S106("+Replace this use of System.out by a logger.(ûÛÏçùÿÿÿÿ8¬Ößˆ2
-M
-java:S1172,"+Remove this unused method parameter "args".(°œ¬×ÿÿÿÿÿ8¬Ößˆ2
-G	java:S106>"+Replace this use of System.out by a logger.(®õã‚8¬Ößˆ2
+r	java:S106"+Replace this use of System.out by a logger.(®ıáëûÿÿÿÿ8«Ößˆ2J$47440c67-027c-4360-ab8a-1c73a78f10da
+s
+java:S1172 "+Remove this unused method parameter "args".(ï±ÅÅøÿÿÿÿ8«Ößˆ2J$18ad88dc-c88b-459a-bb25-855451c61a5a
+r	java:S106)"+Replace this use of System.out by a logger.(ûÛÏçùÿÿÿÿ8¬Ößˆ2J$df3859de-9ed6-47c7-9964-0405ecf3a872
+s
+java:S1172-"+Remove this unused method parameter "args".(°œ¬×ÿÿÿÿÿ8¬Ößˆ2J$640a5a64-48cd-4dcb-a4ba-4d022d3fa479
+m	java:S106?"+Replace this use of System.out by a logger.(®õã‚8¬Ößˆ2J$3af1faf5-d583-4c48-8347-835501e0afd3

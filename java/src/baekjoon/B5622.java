@@ -8,9 +8,10 @@ public class B5622 {
 
     /**
      * 다이얼 - 100ms
-     * @see <a href="https://www.acmicpc.net/problem/5622">문제 보기</a>
+     *
      * @param args args
      * @throws IOException IOException
+     * @see <a href="https://www.acmicpc.net/problem/5622">문제 보기</a>
      */
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
