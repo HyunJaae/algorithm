@@ -1,8 +1,6 @@
 package baekjoon.심화1;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class B2444 {
 
@@ -37,6 +35,26 @@ public class B2444 {
             sb.append("\n");
         }
         System.out.println(sb);
+    }
+
+    // 절대 값을 구하는 Math.abs 함수에 BufferedWriter + repeat 함수를 활용한 풀이 - 108ms
+    public static void other(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int N = Integer.parseInt(br.readLine());
+
+        for (int i = 1; i <= 2 * N - 1; i++) {
+            int spaces = Math.abs(N - i);
+            int stars = 2 * (N - spaces) - 1;
+
+            bw.write(" ".repeat(spaces));
+            bw.write("*".repeat(stars));
+            bw.newLine();
+        }
+
+        bw.flush();
+        bw.close();
+        br.close();
     }
 
     // StringBuffer 사용 풀이 - 108ms
