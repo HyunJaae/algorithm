@@ -1,8 +1,0 @@
-
-r	java:S106"+Replace this use of System.out by a logger.(®ıáëûÿÿÿÿ8«Ößˆ2J$3157f9ba-6612-4001-9ea3-5d70f96a8fcc
-s
-java:S1172 "+Remove this unused method parameter "args".(ï±ÅÅøÿÿÿÿ8«Ößˆ2J$b7331231-462c-4377-bee4-44fca439f19b
-r	java:S106)"+Replace this use of System.out by a logger.(ûÛÏçùÿÿÿÿ8¬Ößˆ2J$52c9eda6-15b7-44d0-91bc-3e9d873bbcc6
-s
-java:S1172-"+Remove this unused method parameter "args".(°œ¬×ÿÿÿÿÿ8¬Ößˆ2J$040275d5-a3a9-4d93-bc35-32ce34652437
-m	java:S106?"+Replace this use of System.out by a logger.(®õã‚8¬Ößˆ2J$717d99fa-72ac-48db-a42e-b3bcec0a237c
