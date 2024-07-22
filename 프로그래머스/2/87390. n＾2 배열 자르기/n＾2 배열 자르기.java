@@ -5,9 +5,7 @@ class Solution {
 
         int idx = 0;
         for (long i = left; i <= right; i++) {
-            long row = i / n;
-            long col = i % n;
-            answer[idx++] = Math.max((int)row, (int)col) + 1;
+            answer[idx++] = (int) Math.max(i/n, i%n) + 1;
         }
         
         return answer;
