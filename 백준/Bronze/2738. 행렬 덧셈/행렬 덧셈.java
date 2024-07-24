@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringBuilder sb = new StringBuilder();
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
@@ -22,11 +22,10 @@ public class Main {
             st = new StringTokenizer(br.readLine(), " ");
             for (int j = 0; j < M; j++) {
                 int sum = arr[i * M + j] + Integer.parseInt(st.nextToken());
-                bw.write(sum + " ");
+                sb.append(sum).append(" ");
             }
-            bw.write("\n");
+            sb.append("\n");
         }
-
-        bw.flush();
+        System.out.println(sb);
     }
 }
