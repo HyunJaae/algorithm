@@ -1,14 +1,23 @@
 class Solution {
     public String solution(String s) {
-        String answer = "";
-        String[] sp = s.toLowerCase().split("");
-        boolean flag = true;
-
-        for(String ss : sp) {
-            answer += flag ? ss.toUpperCase() : ss;
-            flag = ss.equals(" ") ? true : false;
+        StringBuilder sb = new StringBuilder();
+        int l = s.length();
+        char front = ' ';
+        for(int i = 0; i < l; i++){
+            char c = s.charAt(i);
+            if(front == ' '){
+                sb.append(String.valueOf(c).toUpperCase());
+                front = c;
+                continue;
+            }
+            if(c == ' '){
+                sb.append(c);
+                front = c;
+                continue;
+            }
+            sb.append(String.valueOf(c).toLowerCase());
+            front = c;
         }
-
-        return answer;
+        return sb.toString();
     }
 }
