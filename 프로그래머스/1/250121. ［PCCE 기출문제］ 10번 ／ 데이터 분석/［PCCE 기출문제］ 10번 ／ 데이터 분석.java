@@ -1,32 +1,29 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 class Solution {
     public int[][] solution(int[][] data, String ext, int val_ext, String sort_by) {
-        HashMap<String, Integer> map = new HashMap<>();
-        map.put("code", 0);
-        map.put("date", 1);
-        map.put("maximum", 2);
-        map.put("remain", 3);
+        int colExt = getIdx(ext);
+        int colSortBy = getIdx(sort_by);
 
-        int colExt = map.get(ext);
-        int colSortBy = map.get(sort_by);
-
-        List<int[]> list = new ArrayList<>();
-        for (int[] datum : data) {
-            for (int j = 0; j < datum.length; j++) {
-                if (j == colExt && datum[j] < val_ext) {
-                    list.add(datum);
-                }
-            }
+        return Arrays.stream(data)
+                .filter(datum -> datum[colExt] < val_ext)
+                .sorted(Comparator.comparingInt(a -> a[colSortBy]))
+                .collect(Collectors.toList())
+                .toArray(new int[0][0]);
+    }
+    
+    private int getIdx(String str) {
+        switch (str) {
+            case "code":
+                return 0;
+            case "date":
+                return 1;
+            case "maximum":
+                return 2;
+            case "remain":
+                return 3;
         }
-        list.sort(Comparator.comparingInt(a -> a[colSortBy]));
-
-        int[][] answer = new int[list.size()][list.get(0).length];
-
-        for (int i = 0; i < list.size(); i++) {
-            System.arraycopy(list.get(i), 0, answer[i], 0, list.get(i).length);
-        }
-
-        return answer;
+        return 0;
     }
 }
