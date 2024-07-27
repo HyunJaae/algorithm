@@ -1,5 +1,4 @@
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.*;
 
 class Solution {
     public int solution(String[][] clothes) {
@@ -16,7 +15,6 @@ class Solution {
 
         while(it.hasNext()) {
             answer *= it.next() + 1;
-            System.out.println(answer);
         }
 
         // 3. 아무종류의 옷도 입지 않는 경우 제외하기
