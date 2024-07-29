@@ -2,29 +2,18 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int[] progresses, int[] speeds) {
-        Queue<Integer> q = new LinkedList<>();
-        List<Integer> answerList = new ArrayList<>();
-
-        for (int i = 0; i < speeds.length; i++) {
-            double remain = (100 - progresses[i]) / (double) speeds[i];
-            int date = (int) Math.ceil(remain);
-
-            if (!q.isEmpty() && q.peek() < date) {
-                answerList.add(q.size());
-                q.clear();
-            }
-
-            q.offer(date);
+        Deque<Integer> days = new ArrayDeque<>();
+        List<Integer> list = new ArrayList<>();
+        // 7, 3, 9
+        for (int i = 0; i < progresses.length; i++) {
+          int v = (int) Math.ceil((100 - (double) progresses[i]) / (double) speeds[i]);
+          if (days.peek() != null && days.peek() < v) {
+            list.add(days.size());
+            days.clear();
+          }
+          days.offer(v);
         }
-
-        answerList.add(q.size());
-
-        int[] answer = new int[answerList.size()];
-
-        for (int i = 0; i < answer.length; i++) {
-            answer[i] = answerList.get(i);
-        }
-
-        return answer;
+        list.add(days.size());
+        return list.stream().mapToInt(i -> i).toArray();
     }
 }
