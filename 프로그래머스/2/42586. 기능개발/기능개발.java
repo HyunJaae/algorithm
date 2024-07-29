@@ -2,18 +2,29 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int[] progresses, int[] speeds) {
-        Map<Integer, Integer> map = new TreeMap<>();
-        int max = 0;
-        for (int i = 0; i < progresses.length; i++) {
-            int per = 100 - progresses[i];
-            int date = 0;
-            if (per % speeds[i] == 0) date = per / speeds[i];
-            else date = per / speeds[i] + 1;
-            
-            if (max < date) max = date;
-            map.put(max, map.getOrDefault(max, 0) + 1);
+        Queue<Integer> q = new LinkedList<>();
+        List<Integer> answerList = new ArrayList<>();
+
+        for (int i = 0; i < speeds.length; i++) {
+            double remain = (100 - progresses[i]) / (double) speeds[i];
+            int date = (int) Math.ceil(remain);
+
+            if (!q.isEmpty() && q.peek() < date) {
+                answerList.add(q.size());
+                q.clear();
+            }
+
+            q.offer(date);
         }
-        List<Integer> list = new ArrayList<>(map.values());
-        return list.stream().mapToInt(i -> i).toArray();
+
+        answerList.add(q.size());
+
+        int[] answer = new int[answerList.size()];
+
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = answerList.get(i);
+        }
+
+        return answer;
     }
 }
