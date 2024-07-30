@@ -2,17 +2,14 @@ import java.util.PriorityQueue;
 
 class Solution {
     public int solution(int[] scoville, int K) {
-         PriorityQueue<Integer> pqScov = new PriorityQueue<>();
-         for (int s: scoville) {
-             pqScov.add(s);
-         }
-
-         int cnt = 0;
-         while (pqScov.size() > 1 && pqScov.peek() < K) {
-             pqScov.add(pqScov.remove() + pqScov.remove() * 2);
-             cnt++;
-         }
-
-         return pqScov.peek() >= K ? cnt : -1;
+        int answer = 0;
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for (int s : scoville) pq.offer(s);
+        if (pq.peek() >= K) return answer;
+        while (pq.size() > 1 && pq.peek() < K) {
+            pq.offer(pq.poll() + 2 * pq.poll());
+            answer++;
+        }
+        return pq.peek() >= K ? answer : -1;
     }
 }
