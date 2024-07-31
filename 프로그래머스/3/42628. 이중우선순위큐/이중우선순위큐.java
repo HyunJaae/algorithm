@@ -10,7 +10,6 @@ class Solution {
                 int num = Integer.parseInt(operation.split(" ")[1]);
                 asc.offer(num);
                 desc.offer(num);
-                continue;
             }
             if (!desc.isEmpty() && operation.equals("D 1")) {
                 asc.remove(desc.poll());
