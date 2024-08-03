@@ -1,22 +1,28 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashSet;
-import java.util.Set;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Set<Integer> set = new HashSet<>();
+        boolean[] arr = new boolean[20_000_001]; // 크기를 20,000,001로 변경하여 인덱스 문제 해결
         int n = Integer.parseInt(br.readLine());
         String[] cards = br.readLine().split(" ");
         int m = Integer.parseInt(br.readLine());
         String[] numbers = br.readLine().split(" ");
         StringBuilder sb = new StringBuilder();
-        for (String card : cards) set.add(Integer.parseInt(card));
+
+        for (String card : cards) {
+            int c = Integer.parseInt(card);
+            if (c < 0) c = Math.abs(c) + 10_000_000;
+            arr[c] = true;
+        }
+
         for (String number : numbers) {
-            if (set.contains(Integer.parseInt(number))) sb.append("1").append(" ");
+            int no = Integer.parseInt(number);
+            if (no < 0) no = Math.abs(no) + 10_000_000;
+            if (arr[no]) sb.append("1").append(" ");
             else sb.append("0").append(" ");
         }
 
