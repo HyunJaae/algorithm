@@ -9,21 +9,17 @@ class Solution {
     
     public int solution(String word) {
         String[] vowels = {"A", "E", "I", "O", "U"};
-        
-        for (int i = 0; i < 5; i++) {
-            insert(vowels, "", i);
-        }
-        
+
+        insert(vowels, "");
+
         return map.get(word);
     }
     
-    public void insert(String[] vowels, String vowel, int depth) {
+    public void insert(String[] vowels, String vowel) {
+        map.put(vowel, index++);
         if (vowel.length() == 5) return;
-        String word = vowel + vowels[depth]; // "A" -> "AA" -> "AAA" ... -> "AAAAA" -> "AAAAE"
-        index++;
-        map.put(word, index);
         for (int i = 0; i < 5; i++) {
-            insert(vowels, word, i); // "A", 0 -> "AA", 0 ... "AAAA", 1
+            insert(vowels, vowel + vowels[i]);
         }
     }
 }
