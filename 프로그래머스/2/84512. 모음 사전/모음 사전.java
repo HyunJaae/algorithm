@@ -2,26 +2,28 @@ import java.util.Map;
 import java.util.HashMap;
 
 class Solution {
+    
+    private Map<String, Integer> map = new HashMap<>();
+    private int index = 0;
+    
+    
     public int solution(String word) {
-        Map<String, Integer> map = new HashMap<>();
-        String[] arr = {"A", "E", "I", "O", "U"};
-        int index = 1;
+        String[] vowels = {"A", "E", "I", "O", "U"};
+        
         for (int i = 0; i < 5; i++) {
-            map.put(arr[i], index++);
-            for (int j = 0; j < 5; j++) {
-                map.put(arr[i] + arr[j], index++);
-                for (int k = 0; k < 5; k++) {
-                    map.put(arr[i] + arr[j] + arr[k], index++);
-                    for (int o = 0; o < 5; o++) {
-                        map.put(arr[i] + arr[j] + arr[k] + arr[o], index++);
-                        for (int p = 0; p < 5; p++) {
-                            map.put(arr[i] + arr[j] + arr[k] + arr[o] + arr[p], index++);
-                        }
-                    }
-                }
-            }
+            insert(vowels, "", i);
         }
         
         return map.get(word);
+    }
+    
+    public void insert(String[] vowels, String vowel, int depth) {
+        if (vowel.length() == 5) return;
+        String word = vowel + vowels[depth]; // "A" -> "AA" -> "AAA" ... -> "AAAAA" -> "AAAAE"
+        index++;
+        map.put(word, index);
+        for (int i = 0; i < 5; i++) {
+            insert(vowels, word, i); // "A", 0 -> "AA", 0 ... "AAAA", 1
+        }
     }
 }
