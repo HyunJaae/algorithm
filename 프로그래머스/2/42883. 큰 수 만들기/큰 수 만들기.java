@@ -8,14 +8,16 @@ class Solution {
         int cnt = len - k;
         int start = 0;
         while (cnt > 0) {
-            char max = '0';
+            char max = 47;
+            int maxIdx = 0;
             for (int i = start; i <= len - cnt; i++) {
                 if (numbers[i] > max) {
                     max = numbers[i];
-                    start = i + 1;
+                    maxIdx = i;
                 }
             }
             answer.append(max);
+            start = maxIdx + 1;
             cnt--;
         }
         
