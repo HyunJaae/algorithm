@@ -6,11 +6,11 @@ class Solution {
             char[] chars = key.toCharArray();
             for (int i = 0; i < chars.length; i++) {
                 int n = chars[i] - 'A'; // 하나의 키에 할당된 문자
-                if (keyCnt[n] == 0) keyCnt[n] = i + 1; // 처음 나온 문자인 경우
-                else if (keyCnt[n] > i + 1) keyCnt[n] = i + 1; // 문자의 인덱스가 기존 것보다 작은 경우
+                // 처음 나온 문자이거나 문자의 인덱스가 기존 것보다 작은 경우
+                if (keyCnt[n] == 0 || keyCnt[n] > i + 1) keyCnt[n] = i + 1;
             }
         }
-        
+
         for (int i = 0; i < targets.length; i++) {
             int cnt = 0;
             for (char t : targets[i].toCharArray()) {
