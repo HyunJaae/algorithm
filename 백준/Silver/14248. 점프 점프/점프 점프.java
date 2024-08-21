@@ -1,10 +1,10 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class Main {
-
-    static int cnt = 0;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -13,17 +13,24 @@ public class Main {
         String[] strings = br.readLine().split(" ");
         for (int i = 0; i < n; i++) stones[i] = Integer.parseInt(strings[i]);
         int s = Integer.parseInt(br.readLine());
-        dfs(stones, s - 1);
-        System.out.println(cnt);
-    }
+        boolean[] visited = new boolean[n];
+        int[] bias = {1, -1};
 
-    private static void dfs(int[] stones, int idx) {
-        if (stones[idx] == 0) return;
-        int left = idx - stones[idx];
-        int right = idx + stones[idx];
-        stones[idx] = 0;
-        cnt++;
-        if (left >= 0) dfs(stones, left);
-        if (right <= stones.length - 1) dfs(stones, right);
+        int cnt = 1;
+        Deque<Integer> deque = new ArrayDeque<>();
+        deque.push(s - 1);
+        visited[s - 1] = true;
+        while (!deque.isEmpty()) {
+            int q = deque.pop();
+            for (int b : bias) {
+                int abs = q + stones[q] * b;
+                if (0 <= abs && abs < n && !visited[abs]) {
+                    visited[abs] = true;
+                    cnt++;
+                    deque.push(abs);
+                }
+            }
+        }
+        System.out.println(cnt);
     }
 }
