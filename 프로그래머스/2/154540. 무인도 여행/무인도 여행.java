@@ -18,11 +18,11 @@ class Solution {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
                 if (visited[i][j] || ms[i][j] == 0) continue;
-                Deque<Integer[]> dq = new ArrayDeque<>();
-                dq.add(new Integer[]{i, j});
+                Deque<int[]> dq = new ArrayDeque<>();
+                dq.add(new int[]{i, j});
                 int cnt = 0;
                 while (!dq.isEmpty()) {
-                    Integer[] l = dq.pop();
+                    int[] l = dq.pop();
                     int lr = l[0];
                     int lc = l[1];
                     visited[lr][lc] = true;
@@ -35,7 +35,7 @@ class Solution {
                             !visited[r][c]) {
                             visited[r][c] = true;
                             if (ms[r][c] == 0) continue;
-                            dq.add(new Integer[]{r, c});
+                            dq.add(new int[]{r, c});
                         }
                     }
                 }
