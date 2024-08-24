@@ -5,13 +5,13 @@ class Solution {
         int answer = -1;
         int row = board.length;
         int col = board[0].length();
-        char[][] b = new char[row][col];
+        char[][] map = new char[row][col];
         int[] start = new int[3];
         for (int i = 0; i < row; i++) {
             char[] c = board[i].toCharArray();
             for (int j = 0; j < col; j++) {
                 if (c[j] == 'R') start = new int[]{i, j, -1};
-                b[i][j] = c[j];
+                map[i][j] = c[j];
             }
         }
         int[][] pos = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
@@ -24,7 +24,7 @@ class Solution {
             int c = d[1]; // 열
             int m = d[2] + 1; // 이동 횟수
             
-            if (b[r][c] == 'G') {
+            if (map[r][c] == 'G') {
                 if (answer == -1 || answer > m) {
                     answer = m;
                 }
@@ -37,7 +37,7 @@ class Solution {
                 int x = r + p[0];
                 int y = c + p[1];
                 
-                while(x >= 0 && y >= 0 && x < row && y < col && b[x][y] != 'D') {
+                while(x >= 0 && y >= 0 && x < row && y < col && map[x][y] != 'D') {
                     x += p[0];
                     y += p[1];
                 }
@@ -45,7 +45,6 @@ class Solution {
                 x -= p[0];
                 y -= p[1];
                 if (visited[x][y] || r == x && c == y) continue;
-                System.out.println("x: " + x + " y: " + y + " m: " + m);
                 deque.add(new int[]{x, y, m});
             }
         }
