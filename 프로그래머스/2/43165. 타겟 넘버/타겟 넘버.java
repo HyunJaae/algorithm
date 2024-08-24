@@ -1,24 +1,17 @@
 class Solution {
     
-    private int cnt = 0;
     private int[] sign = {1, -1};
     
     public int solution(int[] numbers, int target) {
-        int len = numbers.length;
-        dfs(numbers, 0, 0, len, target);
-        return cnt;
+        int answer = dfs(numbers, 0, 0, target);
+        return answer;
     }
     
-    private void dfs(int[] numbers, int depth, int ret, int len, int target) {
-        if (depth == len) {
-            if (ret == target) cnt++;
-            return;
+    private int dfs(int[] numbers, int depth, int sum, int target) {
+        if (depth == numbers.length) {
+            return sum == target ? 1 : 0;
         }
-        
-        for (int s : sign) {
-            int result = ret + numbers[depth] * s;
-            dfs(numbers, depth + 1, result, len, target);
-        }
-        
+        return dfs(numbers, depth + 1, sum + numbers[depth], target) +
+            dfs(numbers, depth + 1, sum - numbers[depth], target);
     }
 }
