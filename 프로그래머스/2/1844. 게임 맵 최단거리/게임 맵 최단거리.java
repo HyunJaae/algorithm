@@ -20,9 +20,7 @@ class Solution {
             int k = p[2];
             if (visited[px][py]) continue;
             if (px == n - 1 && py == m - 1) {
-                if (answer == -1 || answer > k) {
-                    answer = k;
-                }
+                return k;
             }
             visited[px][py] = true;
             for (int i = 0; i < 4; i++) {
