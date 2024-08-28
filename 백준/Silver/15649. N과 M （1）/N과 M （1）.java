@@ -9,6 +9,7 @@ public class Main {
     static int m;
     static int[] arr = new int[10];
     static boolean[] visited = new boolean[10];
+    static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -16,14 +17,15 @@ public class Main {
         n = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(st.nextToken());
         dfs(0);
+        System.out.println(sb);
     }
 
     private static void dfs(int depth) {
         if (depth == m) {
             for (int i = 0; i < m; i++) {
-                System.out.print(arr[i] + " ");
+                sb.append(arr[i]).append(" ");
             }
-            System.out.println();
+            sb.append("\n");
             return;
         }
 
